@@ -5,4 +5,13 @@
 	width: 900px;
 	height: 900px;
 	background-image: url("onelove.jpg");
+	background-size: cover;
+	background-repeat:no-repeat;
+
+}
+.panel {
+	background-color: lightgrey;
+	padding: 15px 10px;
+	margin-bottom: 10px;
+	border-radius: 10px;
 }

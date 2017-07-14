@@ -1,1 +1,11 @@
 <h1>index.html for posts</h1>
+
+<% @posts.each do |post| %>
+
+	<div class="panel">
+
+		<h2><%= link_to post.title, post_path(post) %></h2>
+		<!-- <p><%= post.body %></p> if the link is there the body is not needed-->
+		<p><%= link_to "edit", edit_post_path(post) %></p>
+	</div>
+<% end %>
