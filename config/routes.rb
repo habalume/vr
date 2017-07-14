@@ -8,10 +8,12 @@ Rails.application.routes.draw do
 
 	get "/post/:id" => "posts#show", as: :post
 	patch "/post/:id" => "posts#update"
-	get "/posts/new" => "posts#new"
+	delete "/post/:id" => "posts#destroy" as: :delete
+
+	get "/posts/new" => "posts#new", as: :new_post
 
 	get "/post/:id/edit" => "posts#edit", as: :edit_post
-	get "/post/:id/edit" => "posts#edit", as: :edit
+	
 
 
 	

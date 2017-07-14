@@ -1,4 +1,4 @@
-<h1>index.html for posts</h1>
+<h1>index.html for posts <%= link_to "New post", new_post_path%></h1>
 
 <% @posts.each do |post| %>
 
@@ -7,5 +7,6 @@
 		<h2><%= link_to post.title, post_path(post) %></h2>
 		<!-- <p><%= post.body %></p> if the link is there the body is not needed-->
 		<p><%= link_to "edit", edit_post_path(post) %></p>
+		<p><%= link_to "delete", post_path(post), method: :delete ,data: {confirm: "Are you sure you want to delete this post"}%></p>
 	</div>
 <% end %>
